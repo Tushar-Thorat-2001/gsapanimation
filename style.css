@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cursor {
+    border-radius: 50%;
+    position: fixed;
+    width: 25vw; /* Adjust the size of the cursor */
+    height: 50vh; /* Adjust the size of the cursor */
+    
+    
+    display: none;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.page1 {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: aliceblue;
+    padding: 1px;
+    overflow: hidden;
+}
+
+.page1 h1 {
+    position: relative;
+    z-index: 99;
+    font-family: Gilroy;
+    font-size: 10vw;
+    font-weight: 7.5rem;
+    line-height:7.813rem;
+    width: 80%;
+    text-transform: uppercase;
+    left: 10%;
+}
+
+.page1 h1 span {
+    -webkit-text-stroke: 1px whitesmoke;
+    font-weight: 500;
+    color: transparent;
+}
+
+.page1 h1:nth-child(1) {
+    margin-top: 40vh;
+}
+
+.page1 h1:nth-child(2),
+.page1 h1:nth-child(3) {
+    text-align: center;
+}
+
+.page1 img {
+    height: 60vh;
+    width: 22vw;
+    position: absolute;
+    z-index: 9;
+    top: 7vh;
+    left: 37%;
+    object-fit: cover;
+}
+
+.page2 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+.horizontal {
+    height: 50vh;
+    width: 40vw;
+    position: absolute;
+    /* background-color: blue; */
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+}
+
+.horizontal img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+
+.page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(22, 22, 22);
+    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: none;
+}
+
+.page3 .video-container {
+    height: 100%;
+    width: 100%;
+}
+
+.page3 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 700px) {
+    .page1 h1 {
+        font-size: 13vw;
+        font-weight: 7.5rem;
+        line-height: 3.813rem;
+        
+       
+    }
+    .page1 h1:nth-child(1) {
+        margin-top: 60vh;
+    }
+
+    .page1 img {
+        height: 60vh;
+        width: 80%;
+        position: absolute;
+        z-index: 9;
+        top: 7vh;
+        left: 10%;
+        object-fit: cover;
+    }
+    .horizontal img {
+        left: -120vw; /* Change left property for screens wider than or equal to 700px */
+    }
+
+    .horizontal {
+        height: 80vh;
+        width: 80vw;
+        position: absolute;
+        /* background-color: blue; */
+        border-radius: 5px;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .cursor {
+        border-radius: 50%;
+        position: fixed;
+        width: 50vw;
+        height: 50vh;
+        display: none;
+        pointer-events: none;
+        z-index: 1000;
+    }
+}
+
